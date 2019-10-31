@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>bfce1780-7772-451a-aa04-7594a215b8a2</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="cricetidea\**" />
+    <Compile Remove="cricetinea\**" />
+    <Content Remove="cricetidea\**" />
+    <Content Remove="cricetinea\**" />
+    <EmbeddedResource Remove="cricetidea\**" />
+    <EmbeddedResource Remove="cricetinea\**" />
+    <None Remove="cricetidea\**" />
+    <None Remove="cricetinea\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Kubernetes.Tools.Targets" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cricetidae\Cricetidae.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,17 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Error",
+      "System": "Error",
+      "Microsoft": "Error",
+      "Console": "Error"
+    },
+    "Console": {
+      "IncludeScopes": true
+    }
+  },
+  "ConnectionStrings": {
+   /* "DefaultConnection": "Server=localhost;Database=Cricetidae;User Id=CricetinaeWebUser;Password=RZB7KiW2hp5gJju3KLAE;",*/
+    "DefaultConnection": "Server=tcp:mealplannercb.database.windows.net,1433;Database=cricetidae;User Id=CricetinaeWebUser;Password=RZB7KiW2hp5gJju3KLAE;"
+  }
+}
