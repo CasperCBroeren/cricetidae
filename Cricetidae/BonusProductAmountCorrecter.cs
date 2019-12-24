@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Cricetidae
 {
-    public class BonusProductAmountCorrecter : IBonusProductAmountCorrecter
+    public class BonusProductAmountCorrecter : IPipeLineItem
     {
         private readonly string ConnectionString;
         private readonly ILogger<BonusProductAmountCorrecter> logger;

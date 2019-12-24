@@ -1,10 +1,10 @@
-/****** Object:  Table [dbo].[BonusProductsEvents]    Script Date: 10/19/2019 9:19:13 PM ******/
+USE [cricetidae]
+GO
+/****** Object:  Table [dbo].[BonusProductsEvents]    Script Date: 12/24/2019 7:11:00 PM ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 CREATE TABLE [dbo].[BonusProductsEvents](
 	[Year] [int] NOT NULL,
 	[Week] [int] NOT NULL,
@@ -23,15 +23,11 @@ CREATE TABLE [dbo].[BonusProductsEvents](
 	[Store] [nvarchar](50) NULL
 ) ON [PRIMARY]
 GO
-
-
-/****** Object:  View [dbo].[vwBonusProductOccurance]    Script Date: 10/19/2019 9:19:22 PM ******/
+/****** Object:  View [dbo].[vwBonusProductOccurance]    Script Date: 12/24/2019 7:11:00 PM ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 
 
 CREATE VIEW [dbo].[vwBonusProductOccurance]
@@ -40,13 +36,11 @@ SELECT        COUNT(*) AS BonusOccurance, Id as IdOfProduct
 FROM            dbo.BonusProductsEvents
 GROUP BY Id
 GO
-/****** Object:  View [dbo].[vwBonusView]    Script Date: 10/19/2019 9:19:26 PM ******/
+/****** Object:  View [dbo].[vwBonusView]    Script Date: 12/24/2019 7:11:00 PM ******/
 SET ANSI_NULLS ON
 GO
-
 SET QUOTED_IDENTIFIER ON
 GO
-
 
 CREATE VIEW [dbo].[vwBonusView]
 AS
@@ -57,5 +51,3 @@ SELECT        dbo.BonusProductsEvents.Year, dbo.BonusProductsEvents.Week, dbo.Bo
 FROM            dbo.BonusProductsEvents INNER JOIN
                          dbo.vwBonusProductOccurance ON dbo.vwBonusProductOccurance.IdOfProduct = dbo.BonusProductsEvents.Id
 GO
-
-

@@ -1,9 +1,7 @@
-﻿using Cricetidae.Interfaces;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System.IO;
 using System.Threading.Tasks;
 
 namespace Cricetidae.UpdateData
@@ -31,10 +29,11 @@ namespace Cricetidae.UpdateData
                           configure.AddConsole();
                       });
                     serviceCollection.AddTransient<IPipeLine, BasicPipeline>();
-                    serviceCollection.AddTransient<IBonusDataPersister, BonusDataPersister>();
-                    serviceCollection.AddHttpClient<IProductPriceDataReader, ProductPriceDataReader>();
-                    serviceCollection.AddHttpClient<IBonusDataReader, BonusDataReader>();
-                    serviceCollection.AddTransient<IBonusProductAmountCorrecter, BonusProductAmountCorrecter>();
+                    serviceCollection.AddTransient<BonusDataPersister>();
+                    serviceCollection.AddHttpClient<ProductPriceDataReader>();
+                    serviceCollection.AddHttpClient<BonusDataReader>();
+                    serviceCollection.AddTransient<BeepTest>();
+                    serviceCollection.AddTransient<BonusProductAmountCorrecter>();
 
                     serviceCollection.AddHostedService<BasicPipeline>();
                 });

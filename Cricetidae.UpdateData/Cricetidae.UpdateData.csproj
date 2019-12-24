@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <UserSecretsId>b0b95af3-f0a2-4470-9c21-d389297f8b29</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="appsettings.json" />
@@ -24,6 +25,7 @@
     <PackageReference Include="Microsoft.Extensions.Http" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.5" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Cricetidae\Cricetidae.csproj" />

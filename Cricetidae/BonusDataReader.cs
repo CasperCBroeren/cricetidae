@@ -6,13 +6,12 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Globalization;
-using Cricetidae.Interfaces;
 using Microsoft.Extensions.Logging;
 using Cricetidae.Pipeline;
 
 namespace Cricetidae
 {
-    public class BonusDataReader : IBonusDataReader
+    public class BonusDataReader : IPipeLineItem
     {
         private const string AH_BASE_URL = "https://www.ah.nl";
         private const string AH_BONUS_PATH = "/bonus/api/bonus-lane";

@@ -1,0 +1,29 @@
+scalar Date
+type Query {
+	
+}
+
+type MessuredProduct {
+  id:				ID!
+  title:			String!
+  bonusOccurance:	Int!
+  brand:			String
+  link:				String
+  store:			String
+  category:			String
+  subCategory:		String
+  prices:			[Price]
+}
+
+type Price {
+	endDate:			Date
+	startDate:			Date
+	fromPriceInCents:	Int!
+	forPriceInCents:	Int!
+	delta:				Int!
+	discountText:		String
+	unitSize:			String
+	activeAt:			Int!
+	year:				Int!
+	Week:				Int!
+}

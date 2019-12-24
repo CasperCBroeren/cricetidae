@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Cricetidae.UpdateData": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

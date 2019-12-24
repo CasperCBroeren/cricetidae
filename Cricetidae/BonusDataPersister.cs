@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic; 
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Cricetidae.DTO;
-using Cricetidae.Interfaces;
 using Cricetidae.Pipeline;
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
@@ -10,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Cricetidae.UpdateData
 {
-    public class BonusDataPersister : IBonusDataPersister
+    public class BonusDataPersister : IPipeLineItem
     {
         private readonly string ConnectionString;
         private readonly ILogger<BonusDataPersister> logger;
